@@ -73,18 +73,22 @@ bool exec_file(string filename) {
 	}
 }
 
+bool fileExists(const std::string& file) {
+	struct stat buf;
+	return (stat(file.c_str(), &buf) == 0);
+}
+
 bool check_exist(string pathf) {
 	{
-		string PATH_temp = pathf;
-		strcpy_s(PATH_EXEC, PATH_temp.c_str());
+		strcpy_s(PATH_EXEC, pathf.c_str());
 		return stat(PATH_EXEC, &info);
 	}
 }
 
 bool check_library() {
 library:
-	lib[1] = "msvcp140.dll";
-	lib[2] = "vcruntime140.dll";
+	lib[1] = "\\msvcp140.dll";
+	lib[2] = "\\vcruntime140.dll";
 	{
 		short b = lib.size() + 1;
 		for (int i = 1; i < b; i++) {
@@ -95,11 +99,6 @@ library:
 			}
 		}
 	}
-}
-
-bool fileExists(const std::string& file) {
-	struct stat buf;
-	return (stat(file.c_str(), &buf) == 0);
 }
 
 bool if_admin() {
@@ -700,7 +699,7 @@ short main()
 		pause_on_continue();
 	}
 
-	//check_library();
+	check_library();
 
 	if (PATH_str.length() > 128) {
 		cout << "PATH directory to long [" << PATH_str.length() << "]!\nPlease change to another short PATH!\n Required: 128 or below!\n";
