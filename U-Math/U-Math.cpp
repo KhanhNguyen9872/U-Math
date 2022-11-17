@@ -119,7 +119,7 @@ bool if_admin() {
 
 void set_console_size() {
 	{
-		system("mode con: cols=65 lines=9001 && color 71");
+		system("mode con: cols=65 lines=9001 && color 07");
 	}
 }
 
