@@ -83,7 +83,8 @@ bool check_exist(string pathf) {
 
 bool check_library() {
 library:
-	//lib[1] = "";
+	lib[1] = "msvcp140.dll";
+	lib[2] = "vcruntime140.dll";
 	{
 		short b = lib.size() + 1;
 		for (int i = 1; i < b; i++) {
@@ -666,7 +667,8 @@ int pthh() {
 	cout << endl;
 	cout << "TMU.LTTTheDev - Can Bang Phuong Trinh Hoa Hoc Bang C++" << endl;
 	string s;
-	getline(cin, s);
+	cout << "PTHH: ";
+	cin >> s;
 	cout << PTHH(s);
 	cout << endl << endl << " ";
 }
@@ -698,7 +700,7 @@ short main()
 		pause_on_continue();
 	}
 
-	//check_library();
+	check_library();
 
 	if (PATH_str.length() > 128) {
 		cout << "PATH directory to long [" << PATH_str.length() << "]!\nPlease change to another short PATH!\n Required: 128 or below!\n";
