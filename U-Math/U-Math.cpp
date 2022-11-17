@@ -10,7 +10,7 @@
 #include <math.h>
 
 using namespace std;
-
+ 
 void clear();
 void pause_on_exit();
 void pause_on_continue();
@@ -700,7 +700,7 @@ short main()
 		pause_on_continue();
 	}
 
-	check_library();
+	//check_library();
 
 	if (PATH_str.length() > 128) {
 		cout << "PATH directory to long [" << PATH_str.length() << "]!\nPlease change to another short PATH!\n Required: 128 or below!\n";
