@@ -714,7 +714,7 @@ main_menu:
 	clear();
 	prog_main();
 	cout << "PATH: " << PATH_str << "\n\n";
-	cout << " 1. Dao ham da thuc\n 2. Ma tran nghich dao\n 3. Phuong trinh hoa hoc\n 0. Exit\n\n Your choose: ";
+	cout << " 1. Dao ham da thuc\n 2. Tinh dinh thuc va ma tran nghich dao\n 3. Phuong trinh hoa hoc\n 0. Exit\n\n Your choose: ";
 	cin >> khanh;
 	switch (khanh) {
 	case 1:
